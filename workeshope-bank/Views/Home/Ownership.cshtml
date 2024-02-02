@@ -1,0 +1,35 @@
+﻿@using workeshope_bank.Entity
+@model List<CarditCard>
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table class="table" a>
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">نام بانک</th>
+            <th scope="col">دارایی</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+             <tr>
+            <th scope="row">@item.Id</th>
+            <td>@item.BankName</td>
+            <td>@item.OwnerShip</td>
+            
+             </tr>
+            
+        }
+    </tbody>
+ </table>
+<div class="row">
+    <div class="col-sm-4">
+        <a asp-action="" asp-controller="CarditCard" class="btn btn-outline-success"></a>
+    </div>
+</div>
+       
+       
